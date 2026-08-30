@@ -11,6 +11,8 @@ export interface CertificationItem {
   date?: string;
   desc: string;
   image?: string;
+  verificationUrl?: string;
+  verificationCode?: string;
 }
 
 export default function CertificationsSection({
@@ -87,6 +89,26 @@ export default function CertificationsSection({
                   <p className="text-base text-slate-200 leading-relaxed max-w-3xl">
                     {cert.desc}
                   </p>
+
+                  {(cert.verificationCode || cert.verificationUrl) && (
+                    <div className="mt-4 flex flex-wrap items-center gap-3 font-mono text-xs">
+                      {cert.verificationCode && (
+                        <span className="rounded border border-line bg-bg px-3 py-1.5 text-slate-300">
+                          Verification Code: <strong className="text-copper font-semibold">{cert.verificationCode}</strong>
+                        </span>
+                      )}
+                      {cert.verificationUrl && (
+                        <a
+                          href={cert.verificationUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 rounded border border-copper/40 bg-copper/10 px-3 py-1.5 font-semibold text-copper hover:bg-copper hover:text-bg transition-colors"
+                        >
+                          Verify Certificate ↗
+                        </a>
+                      )}
+                    </div>
+                  )}
 
                   {cert.image && (
                     <div className="mt-6">

@@ -19,10 +19,12 @@ const certifications = [
   {
     id: "web-design",
     name: "Web Design for Beginners",
-    issuer: "Centre for Open & Distance Learning (CODL), Dept. of Information Technology",
-    place: "Faculty of Information Technology, University of Moratuwa",
-    desc: "Online learning programme covering standard HTML5, CSS3, modern UI layout principles, and web standard best practices.",
-    image: "/assets/cert-web-design.svg",
+    issuer: "Centre for Open & Distance Learning (CODL)",
+    place: "Department of Information Technology, Faculty of Information Technology, University of Moratuwa",
+    desc: "Official E-Certificate presented upon completing the online learning programme in Web Design for Beginners conducted by the Department of Information Technology, Faculty of Information Technology, University of Moratuwa, Sri Lanka.",
+    image: "/assets/cert-web-design.png",
+    verificationCode: "6dXMSXDg3g",
+    verificationUrl: "https://open.uom.lk/verify",
   },
   {
     id: "java",
