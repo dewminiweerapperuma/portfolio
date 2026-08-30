@@ -22,7 +22,7 @@ const certifications = [
     issuer: "Centre for Open & Distance Learning (CODL)",
     place: "Department of Information Technology, Faculty of Information Technology, University of Moratuwa",
     desc: "Official E-Certificate presented upon completing the online learning programme in Web Design for Beginners conducted by the Department of Information Technology, Faculty of Information Technology, University of Moratuwa, Sri Lanka.",
-    image: "/assets/cert-web-design.png",
+    image: "/assets/cert-web-design-official.png",
     verificationCode: "6dXMSXDg3g",
     verificationUrl: "https://open.uom.lk/verify",
   },
