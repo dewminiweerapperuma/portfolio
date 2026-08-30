@@ -74,7 +74,7 @@ const certifications = [
     issuer: "Centre for Open & Distance Learning (CODL), Dept. of Information Technology",
     place: "Faculty of Information Technology, University of Moratuwa",
     desc: "Comprehensive web design certification covering standard HTML5, CSS3, modern UI layout principles, and web standard best practices.",
-    image: "/assets/cert-web-design.png",
+    image: "/assets/cert-web-design.svg",
   },
   {
     id: "java",
@@ -82,7 +82,7 @@ const certifications = [
     issuer: "SoloLearn Certificate of Achievement",
     date: "Issued August 2025",
     desc: "Verified course certificate demonstrating object-oriented programming principles, data structures, and Java core fundamentals.",
-    image: "/assets/cert-java.jpg",
+    image: "/assets/cert-java.svg",
   },
   {
     id: "c-lang",
@@ -90,7 +90,7 @@ const certifications = [
     issuer: "SoloLearn Certificate of Achievement",
     date: "Issued July 2025",
     desc: "Verified course certificate covering memory management, pointer arithmetic, control structures, and low-level C programming.",
-    image: "/assets/cert-c.jpg",
+    image: "/assets/cert-c.svg",
   },
 ];
 

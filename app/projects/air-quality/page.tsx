@@ -11,12 +11,12 @@ export const metadata: Metadata = {
 
 const photos = [
   {
-    src: "/assets/air-quality-poster.jpg",
+    src: "/assets/air-quality-poster.svg",
     alt: "FIT EXPO 2025 Air Quality Project Poster",
     caption: "Official FIT EXPO 2025 Presentation Poster — Circuit Diagram, Block Diagram, PCB Design, Components & Hardware Assembly.",
   },
   {
-    src: "/assets/team-tech-titans.png",
+    src: "/assets/team-tech-titans.svg",
     alt: "Team Tech Titans with completed prototype at FIT EXPO 2025",
     caption: "Team 'Tech Titans' with the completed Indoor Air Quality Monitoring System prototype, FIT EXPO 2025.",
   },
@@ -183,7 +183,7 @@ export default function AirQualityPage() {
         </div>
         <div className="relative h-[400px] sm:h-[600px] lg:h-[750px] w-full bg-bg/50">
           <Image
-            src="/assets/air-quality-poster.jpg"
+            src="/assets/air-quality-poster.svg"
             alt="FIT EXPO 2025 Air Quality Project Poster"
             fill
             className="object-contain p-4"
