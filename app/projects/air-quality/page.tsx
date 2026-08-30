@@ -160,35 +160,13 @@ export default function AirQualityPage() {
 
             <div className="pt-2">
               <a
-                href="#poster"
+                href="#gallery"
                 className="w-full inline-flex justify-center items-center gap-2 rounded-xl bg-copper px-5 py-3 font-mono text-xs font-semibold text-bg transition-colors hover:bg-signal"
               >
-                View EXPO Poster & Team 📸
+                View Project Gallery & Team 📸
               </a>
             </div>
           </div>
-        </div>
-      </div>
-
-      {/* Featured Poster Mockup Frame */}
-      <div id="poster" className="mt-14 overflow-hidden rounded-2xl border border-line bg-panel shadow-2xl">
-        <div className="flex items-center justify-between border-b border-line bg-bg/90 px-5 py-3 font-mono text-xs text-slate-400">
-          <div className="flex items-center gap-2">
-            <span className="h-3 w-3 rounded-full bg-rose-500/80" />
-            <span className="h-3 w-3 rounded-full bg-amber-500/80" />
-            <span className="h-3 w-3 rounded-full bg-emerald-500/80" />
-            <span className="ml-2 font-mono text-xs text-slate-400 hidden sm:inline">fit-expo-2025-presentation-poster.pdf</span>
-          </div>
-          <span className="text-copper">FIT EXPO 2025 Showcase Poster</span>
-        </div>
-        <div className="relative h-[400px] sm:h-[600px] lg:h-[750px] w-full bg-bg/50">
-          <Image
-            src="/assets/air-quality-poster.jpg"
-            alt="FIT EXPO 2025 Air Quality Project Poster"
-            fill
-            className="object-contain p-4"
-            priority
-          />
         </div>
       </div>
 
@@ -239,7 +217,7 @@ export default function AirQualityPage() {
       </div>
 
       {/* Full Width Photos Gallery */}
-      <div className="mt-20">
+      <div id="gallery" className="mt-20">
         <ProjectGallery photos={photos} />
       </div>
     </article>
