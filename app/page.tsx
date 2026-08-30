@@ -81,10 +81,11 @@ const certifications = [
   {
     id: "java",
     name: "Introduction to Java",
-    issuer: "SoloLearn Certificate of Achievement",
-    date: "Issued August 2025",
-    desc: "Verified course certificate demonstrating object-oriented programming principles, data structures, and Java core fundamentals.",
-    image: "/assets/cert-java.svg",
+    issuer: "Sololearn Course Certificate",
+    date: "Issued August 30, 2025",
+    desc: "Verified SoloLearn course certificate demonstrating theoretical and practical understanding of object-oriented programming, data structures, and Java core fundamentals.",
+    image: "/assets/cert-java-official.jpg",
+    verificationCode: "CC-OZKS6GFN",
   },
   {
     id: "c-lang",
