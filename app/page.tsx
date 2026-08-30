@@ -60,6 +60,15 @@ const timeline = [
 
 const certifications = [
   {
+    id: "road-to-legacy",
+    name: "Certificate of Appreciation — Road To Legacy 2.0",
+    issuer: "IEEE USJ Student Branch",
+    place: "University of Sri Jayewardenepura",
+    date: "Issued May 31, 2025",
+    desc: "Certificate of appreciation presented in sincere recognition of outstanding dedication and valuable contribution as a Member of the Delegates Handling Team in the Organizing Committee of Road To Legacy 2.0.",
+    image: "/assets/cert-road-to-legacy.png",
+  },
+  {
     id: "web-design",
     name: "Web Design for Beginners",
     issuer: "Centre for Open & Distance Learning (CODL), Dept. of Information Technology",
