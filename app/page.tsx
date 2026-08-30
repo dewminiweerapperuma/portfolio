@@ -90,10 +90,11 @@ const certifications = [
   {
     id: "c-lang",
     name: "Introduction to C",
-    issuer: "SoloLearn Certificate of Achievement",
-    date: "Issued July 2025",
-    desc: "Verified course certificate covering memory management, pointer arithmetic, control structures, and low-level C programming.",
-    image: "/assets/cert-c.svg",
+    issuer: "Sololearn Course Certificate",
+    date: "Issued July 31, 2025",
+    desc: "Verified SoloLearn course certificate demonstrating theoretical and practical understanding of memory management, pointer arithmetic, control structures, and low-level C programming.",
+    image: "/assets/cert-c-official.jpg",
+    verificationCode: "CC-VPDF6QPS",
   },
 ];
 
