@@ -8,14 +8,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bg: "#0A1420",
-        panel: "#101E2E",
-        panel2: "#0D1826",
-        line: "#22384F",
-        lineSoft: "#182A3E",
-        copper: "#E59A65",
-        copperDim: "#A66D42",
-        signal: "#34D399",
+        bg: "#080D18",
+        panel: "#0F172A",
+        panel2: "#162238",
+        line: "#1E2C42",
+        lineSoft: "#142032",
+        copper: "#F59E0B",
+        copperDim: "#B45309",
+        signal: "#10B981",
         ink: "#F8FAFC",
         inkDim: "#CBD5E1",
         inkFaint: "#94A3B8",
@@ -26,10 +26,10 @@ const config: Config = {
         mono: ["var(--font-jbmono)", "monospace"],
       },
       backgroundImage: {
-        grid: "linear-gradient(#152437 1px, transparent 1px), linear-gradient(90deg, #152437 1px, transparent 1px)",
+        grid: "linear-gradient(rgba(30, 44, 66, 0.35) 1px, transparent 1px), linear-gradient(90deg, rgba(30, 44, 66, 0.35) 1px, transparent 1px)",
       },
       backgroundSize: {
-        grid: "32px 32px",
+        grid: "36px 36px",
       },
     },
   },
