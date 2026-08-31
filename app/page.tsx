@@ -171,10 +171,10 @@ export default function Home() {
             <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg overflow-hidden rounded-3xl border border-line bg-panel p-3 shadow-2xl transition-all duration-300">
               <div className="relative overflow-hidden rounded-2xl bg-bg/60 h-[500px] sm:h-[580px] w-full">
                 <Image
-                  src="/assets/dewmini-profile.png"
+                  src="/assets/dewmini-profile-new.png"
                   alt="Dewmini Weerapperuma"
                   fill
-                  className="object-cover object-[center_30%]"
+                  className="object-cover object-[center_20%]"
                   priority
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
