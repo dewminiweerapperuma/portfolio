@@ -11,47 +11,27 @@ export const metadata: Metadata = {
 
 const photos = [
   {
-    src: "/assets/shoppos-dashboard.svg",
+    src: "/assets/shoppos-dashboard.png",
     alt: "ShopPOS Overview Dashboard",
-    caption: "Overview Dashboard — Real-time monitoring of transactions, stock levels, and expiration alerts.",
+    caption: "Overview Dashboard — Real-time monitoring of transactions, stock levels, and critical alerts.",
   },
   {
-    src: "/assets/shoppos-products.svg",
+    src: "/assets/shoppos-products.png",
     alt: "ShopPOS Product Catalog",
     caption: "Product Catalog — Inventory listings, unit prices, stock levels, and reorder thresholds.",
   },
   {
-    src: "/assets/shoppos-analytics.svg",
+    src: "/assets/shoppos-analytics.png",
     alt: "ShopPOS Sales Analytics & Reorder Warnings",
     caption: "Sales Analytics — Daily sales curve, top low-stock visual breakdown, and critical warnings.",
   },
   {
-    src: "/assets/shoppos-restock.svg",
-    alt: "ShopPOS Restock Product Modal",
-    caption: "Restock Management — Restock quantities, expiry date tracking, and movement logs.",
-  },
-  {
-    src: "/assets/shoppos-add-product.svg",
+    src: "/assets/shoppos-add-product.png",
     alt: "ShopPOS Add Product Listing Modal",
     caption: "Add Product Listing — Barcode code, unit basis, cost/selling prices, and alert thresholds.",
   },
   {
-    src: "/assets/shoppos-credit-customers.svg",
-    alt: "ShopPOS Credit Customer Accounts",
-    caption: "Credit Customer Accounts — Track informal tabs, credit limits, and customer payments.",
-  },
-  {
-    src: "/assets/shoppos-returns.svg",
-    alt: "ShopPOS Log Customer Return Modal",
-    caption: "Customer Returns — Record returned items with stock restore or discard write-off options.",
-  },
-  {
-    src: "/assets/shoppos-receipt.svg",
-    alt: "ShopPOS Retail Store Sale Receipt",
-    caption: "Scan-to-Sell & Receipt Modal — Real-time barcode sale transaction receipt.",
-  },
-  {
-    src: "/assets/shoppos-login.svg",
+    src: "/assets/shoppos-login.png",
     alt: "ShopPOS Authentication Screen",
     caption: "ShopPOS Authentication — Role-based access for store owners and staff.",
   },
@@ -211,7 +191,7 @@ export default function ShopInventoryPage() {
         </div>
         <div className="relative h-72 sm:h-[450px] lg:h-[550px] w-full bg-bg/50">
           <Image
-            src="/assets/shoppos-dashboard.svg"
+            src="/assets/shoppos-dashboard.png"
             alt="ShopPOS Overview Dashboard"
             fill
             className="object-cover object-top"
