@@ -147,7 +147,7 @@ export default function Home() {
             </h2>
             
             <p className="mt-5 text-sm leading-relaxed text-slate-300 sm:text-base lg:text-lg">
-              I build full-stack applications with Next.js, TypeScript, React, and Node.js/Express, backed by PostgreSQL and MongoDB — and because I&apos;m also studying business and management alongside information technology, I tend to think about the products I build from both a technical and a business standpoint: not just how it&apos;s built, but why it matters.
+              Undergraduate in Information Technology and Management at Faculty of IT, University of Moratuwa.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
