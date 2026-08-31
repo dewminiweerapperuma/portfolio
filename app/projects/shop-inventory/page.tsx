@@ -203,28 +203,6 @@ export default function ShopInventoryPage() {
         </div>
       </div>
 
-      {/* Featured Primary Dashboard Mockup Frame */}
-      <div className="mt-14 overflow-hidden rounded-2xl border border-line bg-panel shadow-2xl">
-        <div className="flex items-center justify-between border-b border-line bg-bg/90 px-5 py-3 font-mono text-xs text-slate-400">
-          <div className="flex items-center gap-2">
-            <span className="h-3 w-3 rounded-full bg-rose-500/80" />
-            <span className="h-3 w-3 rounded-full bg-amber-500/80" />
-            <span className="h-3 w-3 rounded-full bg-emerald-500/80" />
-            <span className="ml-2 font-mono text-xs text-slate-400 hidden sm:inline">shoppos-overview-dashboard.app</span>
-          </div>
-          <span className="text-copper">Featured System Overview</span>
-        </div>
-        <div className="relative h-72 sm:h-[450px] lg:h-[550px] w-full bg-bg/50">
-          <Image
-            src="/assets/shoppos-dashboard.png"
-            alt="ShopPOS Overview Dashboard"
-            fill
-            className="object-cover object-top"
-            priority
-          />
-        </div>
-      </div>
-
       {/* Key System Features Cards Grid */}
       <div className="mt-20">
         <div className="text-center max-w-3xl mx-auto mb-12">
