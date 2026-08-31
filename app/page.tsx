@@ -143,12 +143,8 @@ export default function Home() {
             </h1>
 
             <h2 className="mt-5 font-display text-xl font-medium leading-snug text-slate-200 sm:text-2xl lg:text-3xl">
-              A software engineer with a background in both engineering and management.
-            </h2>
-            
-            <p className="mt-5 text-sm leading-relaxed text-slate-300 sm:text-base lg:text-lg">
               Undergraduate in Information Technology and Management at Faculty of IT, University of Moratuwa.
-            </p>
+            </h2>
 
             <div className="mt-8 flex flex-wrap gap-4">
               <Link
