@@ -15,7 +15,7 @@ export default function PageHeader({
       <span className="font-mono text-xs uppercase tracking-widest text-copper">
         {eyebrow}
       </span>
-      <h1 className="mt-2 font-display text-4xl font-medium sm:text-5xl">
+      <h1 className="mt-2 font-display text-3xl font-medium sm:text-4xl lg:text-4xl text-slate-100">
         {title}
       </h1>
       {subtitle && (

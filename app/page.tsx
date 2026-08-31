@@ -138,28 +138,28 @@ export default function Home() {
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-12">
           {/* Left Content */}
           <div className="lg:col-span-7">
-            <h1 className="mt-3 font-display text-5xl font-medium leading-[1.05] text-slate-100 sm:text-6xl lg:text-7xl xl:text-8xl">
+            <h1 className="mt-3 font-display text-4xl font-medium leading-[1.08] text-slate-100 sm:text-5xl lg:text-6xl xl:text-7xl">
               Hi, I&apos;m <span className="text-copper">Dewmini</span>
             </h1>
 
-            <h2 className="mt-6 font-display text-2xl font-medium leading-snug text-slate-100 sm:text-3xl lg:text-4xl">
+            <h2 className="mt-5 font-display text-xl font-medium leading-snug text-slate-200 sm:text-2xl lg:text-3xl">
               A software engineer with a background in both engineering and management.
             </h2>
             
-            <p className="mt-6 text-base leading-relaxed text-slate-200 sm:text-lg lg:text-xl">
+            <p className="mt-5 text-sm leading-relaxed text-slate-300 sm:text-base lg:text-lg">
               I build full-stack applications with Next.js, TypeScript, React, and Node.js/Express, backed by PostgreSQL and MongoDB — and because I&apos;m also studying business and management alongside information technology, I tend to think about the products I build from both a technical and a business standpoint: not just how it&apos;s built, but why it matters.
             </p>
 
-            <div className="mt-10 flex flex-wrap gap-5">
+            <div className="mt-8 flex flex-wrap gap-4">
               <Link
                 href="/#projects"
-                className="rounded-full bg-copper px-8 py-4 font-mono text-sm font-semibold text-bg transition-colors hover:bg-signal"
+                className="rounded-full bg-copper px-7 py-3.5 font-mono text-xs sm:text-sm font-semibold text-bg transition-colors hover:bg-signal"
               >
                 View Projects
               </Link>
               <Link
                 href="/#contact"
-                className="rounded-full border-2 border-copper px-8 py-4 font-mono text-sm font-semibold text-copper transition-colors hover:bg-copper hover:text-bg"
+                className="rounded-full border-2 border-copper px-7 py-3.5 font-mono text-xs sm:text-sm font-semibold text-copper transition-colors hover:bg-copper hover:text-bg"
               >
                 Get In Touch
               </Link>
@@ -169,7 +169,7 @@ export default function Home() {
           {/* Right Photo */}
           <div className="flex justify-center lg:col-span-5 lg:justify-end">
             <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg overflow-hidden rounded-3xl border border-line bg-panel p-3 shadow-2xl transition-all duration-300">
-              <div className="relative overflow-hidden rounded-2xl bg-bg/60 h-[500px] sm:h-[580px] w-full">
+              <div className="relative overflow-hidden rounded-2xl bg-bg/60 h-[460px] sm:h-[540px] w-full">
                 <Image
                   src="/assets/dewmini-profile-new.png"
                   alt="Dewmini Weerapperuma"
@@ -193,7 +193,7 @@ export default function Home() {
             nodeId="U0 — ABOUT"
           />
 
-          <div className="trace-module mt-10 space-y-6 text-base sm:text-lg leading-relaxed text-slate-200">
+          <div className="trace-module mt-10 space-y-5 text-sm sm:text-base leading-relaxed text-slate-300">
             <p>
               I&apos;m Dewmini Weerapperuma, a software engineer with a
               background that spans both engineering and management. I build
