@@ -16,6 +16,16 @@ const photos = [
     caption: "Overview Dashboard — Real-time monitoring of transactions, stock levels, and critical alerts.",
   },
   {
+    src: "/assets/shoppos-scan-sell.png",
+    alt: "ShopPOS Scan & Sell POS Terminal",
+    caption: "Scan & Sell POS Terminal — Interactive retail checkout cart, barcode lookup, and instant checkout.",
+  },
+  {
+    src: "/assets/shoppos-receipt.png",
+    alt: "ShopPOS Retail Store Sale Receipt",
+    caption: "Sale Receipt — Instant transaction receipt with automatic stock level deduction.",
+  },
+  {
     src: "/assets/shoppos-products.png",
     alt: "ShopPOS Product Catalog",
     caption: "Product Catalog — Inventory listings, unit prices, stock levels, and reorder thresholds.",
@@ -26,9 +36,24 @@ const photos = [
     caption: "Sales Analytics — Daily sales curve, top low-stock visual breakdown, and critical warnings.",
   },
   {
+    src: "/assets/shoppos-restock.png",
+    alt: "ShopPOS Restock Product Modal",
+    caption: "Restock Management — Restock quantities, required expiry date tracking, and movement logs.",
+  },
+  {
     src: "/assets/shoppos-add-product.png",
     alt: "ShopPOS Add Product Listing Modal",
     caption: "Add Product Listing — Barcode code, unit basis, cost/selling prices, and alert thresholds.",
+  },
+  {
+    src: "/assets/shoppos-suppliers.png",
+    alt: "ShopPOS Suppliers Directory",
+    caption: "Suppliers Directory — Manage wholesale distributors, contact details, and supply lines.",
+  },
+  {
+    src: "/assets/shoppos-add-supplier.png",
+    alt: "ShopPOS Register Wholesale Vendor Modal",
+    caption: "Register Supplier Vendor — Create wholesale vendor profiles associated with catalog products.",
   },
   {
     src: "/assets/shoppos-login.png",
