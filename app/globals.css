@@ -29,32 +29,4 @@ body {
 
 .trace-module {
   position: relative;
-  border-left: 1px solid #1E2C42;
-  margin-left: 6px;
-  padding-left: 44px;
-}
-
-.trace-module::before {
-  content: "";
-  position: absolute;
-  left: -6px;
-  top: 82px;
-  width: 11px;
-  height: 11px;
-  border-radius: 9999px;
-  background: #080D18;
-  border: 2px solid #F59E0B;
-  box-shadow: 0 0 10px rgba(245, 158, 11, 0.4);
-}
-
-@media (max-width: 640px) {
-  .trace-module {
-    margin-left: 2px;
-    padding-left: 28px;
-  }
-  .trace-module::before {
-    left: -5px;
-    width: 9px;
-    height: 9px;
-  }
 }
