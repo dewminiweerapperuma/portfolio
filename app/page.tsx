@@ -216,13 +216,7 @@ export default function Home() {
           </div>
 
           <div className="trace-module mt-20">
-            <div className="mb-1 font-mono text-xs text-slate-400">
-              U1 — SKILLS
-            </div>
-            <span className="font-mono text-xs uppercase tracking-widest text-copper">
-              Technical Skills
-            </span>
-            <h3 className="mt-2 font-display text-3xl font-medium text-slate-100 sm:text-4xl">
+            <h3 className="font-display text-3xl font-medium text-slate-100 sm:text-4xl">
               What I build with
             </h3>
             <p className="mt-3 max-w-xl text-base text-slate-200 sm:text-lg">

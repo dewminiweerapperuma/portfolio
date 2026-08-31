@@ -4,18 +4,14 @@ export default function PageHeader({
   subtitle,
   nodeId,
 }: {
-  eyebrow: string;
+  eyebrow?: string;
   title: string;
   subtitle?: string;
-  nodeId: string;
+  nodeId?: string;
 }) {
   return (
     <div className="trace-module">
-      <div className="mb-1 font-mono text-xs text-inkFaint">{nodeId}</div>
-      <span className="font-mono text-xs uppercase tracking-widest text-copper">
-        {eyebrow}
-      </span>
-      <h1 className="mt-2 font-display text-3xl font-medium sm:text-4xl lg:text-4xl text-slate-100">
+      <h1 className="font-display text-3xl font-medium sm:text-4xl lg:text-4xl text-slate-100">
         {title}
       </h1>
       {subtitle && (
