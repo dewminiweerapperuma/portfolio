@@ -51,7 +51,7 @@ export default function CertificationsPage() {
     <section className="mx-auto max-w-7xl px-8 py-20 sm:py-28">
       <PageHeader
         eyebrow="Certifications"
-        title="Certifications & Qualifications"
+        title="Certifications & Contributions"
         subtitle="Verified courses and completed programmes, from foundational programming to web design."
         nodeId="U4 — CERTIFICATIONS"
       />
