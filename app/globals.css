@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  background-color: #080D18;
+  background-color: #090A1A;
   color: #F8FAFC;
 }
 
@@ -23,8 +23,8 @@ body {
 }
 
 ::selection {
-  background: #F59E0B;
-  color: #080D18;
+  background: #6366F1;
+  color: #FFFFFF;
 }
 
 .trace-module {

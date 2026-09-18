@@ -42,7 +42,7 @@ export default function CertificationsSection({
               onClick={() => toggleExpand(cert.id)}
               className={`group cursor-pointer border transition-all duration-300 rounded-xl bg-panel p-6 sm:p-8 ${
                 isExpanded
-                  ? "border-copper shadow-[0_10px_30px_rgba(229,154,101,0.15)]"
+                  ? "border-copper shadow-[0_10px_30px_rgba(99,102,241,0.2)]"
                   : "border-line hover:border-copper/60 hover:bg-panel2"
               }`}
             >
