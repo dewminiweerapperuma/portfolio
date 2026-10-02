@@ -2,30 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import PageHeader from "@/components/PageHeader";
 import CertificationsSection from "@/components/CertificationsSection";
+import TechStackCarousel from "@/components/TechStackCarousel";
 import ContactSection from "@/components/ContactSection";
-
-const categories = [
-  {
-    title: "Frontend",
-    desc: "Building intuitive interfaces, responsive layouts, and client-side web application logic.",
-    tags: ["Next.js 14", "React 18", "TypeScript", "JavaScript (ES6+)", "Tailwind CSS"],
-  },
-  {
-    title: "Backend",
-    desc: "RESTful APIs, authentication systems, and scalable server-side architecture.",
-    tags: ["Node.js", "Express", "REST APIs", "JWT Auth", "Middleware"],
-  },
-  {
-    title: "Databases",
-    desc: "Relational database schema modeling, queries, and document-based data persistence.",
-    tags: ["PostgreSQL", "MongoDB", "Supabase", "Prisma ORM", "SQL"],
-  },
-  {
-    title: "Tools & Platforms",
-    desc: "Developer tools, deployment workflows, version control, and embedded systems hardware.",
-    tags: ["Docker", "Git / GitHub", "Firebase", "Arduino / C++", "ESP32 IoT"],
-  },
-];
 
 const timeline = [
   {
@@ -226,35 +204,22 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="trace-module mt-20">
-            <h3 className="font-display text-3xl font-medium text-slate-100 sm:text-4xl">
-              What I build with
-            </h3>
-            <p className="mt-3 max-w-xl text-base text-slate-200 sm:text-lg">
-              A stack spun up for full-stack web apps, with detours into
-              embedded hardware when a project calls for it.
-            </p>
-
-            <div className="mt-10 grid grid-cols-1 gap-px overflow-hidden border border-line bg-line sm:grid-cols-2 lg:grid-cols-2">
-              {categories.map((cat) => (
-                <div key={cat.title} className="bg-panel p-8">
-                  <h4 className="font-mono text-xs uppercase tracking-widest text-signal font-semibold">
-                    {cat.title}
-                  </h4>
-                  <p className="mt-3 text-base text-slate-200 leading-relaxed">{cat.desc}</p>
-                  <div className="mt-5 flex flex-wrap gap-2.5">
-                    {cat.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="rounded-full border border-copperDim bg-copper/10 px-3.5 py-1.5 font-mono text-xs text-copper font-medium"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              ))}
+          <div className="trace-module mt-20" id="tech-stack">
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-2">
+              <div>
+                <span className="font-mono text-xs uppercase tracking-widest text-signal font-semibold">
+                  Technical Stack & Tools
+                </span>
+                <h3 className="mt-1 font-display text-3xl font-medium text-slate-100 sm:text-4xl">
+                  My Tech Stack
+                </h3>
+              </div>
+              <p className="max-w-md text-sm sm:text-base text-slate-300">
+                Explore languages, frameworks, databases, DevOps tools, and embedded platforms.
+              </p>
             </div>
+
+            <TechStackCarousel />
           </div>
         </div>
       </section>

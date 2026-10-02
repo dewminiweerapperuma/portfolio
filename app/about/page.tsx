@@ -1,32 +1,10 @@
 import type { Metadata } from "next";
 import PageHeader from "@/components/PageHeader";
+import TechStackCarousel from "@/components/TechStackCarousel";
 
 export const metadata: Metadata = {
   title: "About — Dewmini Weerapperuma",
 };
-
-const categories = [
-  {
-    title: "Frontend",
-    desc: "Building interfaces and client-side logic.",
-    tags: ["Next.js", "React", "TypeScript", "JavaScript"],
-  },
-  {
-    title: "Backend",
-    desc: "APIs, auth, and server-side logic.",
-    tags: ["Node.js", "Express", "REST APIs", "JWT Auth"],
-  },
-  {
-    title: "Databases",
-    desc: "Relational and document-based data.",
-    tags: ["PostgreSQL", "MongoDB", "Supabase", "Prisma ORM"],
-  },
-  {
-    title: "Tools & Platforms",
-    desc: "Everything around the code itself.",
-    tags: ["Docker", "Git", "Firebase", "Arduino / C++"],
-  },
-];
 
 export default function AboutPage() {
   return (
@@ -71,32 +49,15 @@ export default function AboutPage() {
           Technical Skills
         </span>
         <h2 className="mt-2 font-display text-3xl font-medium">
-          What I build with
+          My Tech Stack
         </h2>
         <p className="mt-3 max-w-lg text-inkDim">
           A stack spun up for full-stack web apps, with detours into
           embedded hardware when a project calls for it.
         </p>
 
-        <div className="mt-10 grid grid-cols-1 gap-px overflow-hidden border border-line bg-line sm:grid-cols-2">
-          {categories.map((cat) => (
-            <div key={cat.title} className="bg-panel p-6">
-              <h3 className="font-mono text-xs uppercase tracking-widest text-signal">
-                {cat.title}
-              </h3>
-              <p className="mt-3 text-sm text-inkDim">{cat.desc}</p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {cat.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-full border border-copperDim bg-copper/10 px-3 py-1 font-mono text-xs text-copper"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ))}
+        <div className="mt-6">
+          <TechStackCarousel />
         </div>
       </div>
     </section>
