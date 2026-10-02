@@ -11,6 +11,7 @@ export interface CertificationItem {
   date?: string;
   desc: string;
   image?: string;
+  badge?: string;
   verificationUrl?: string;
   verificationCode?: string;
 }
@@ -48,23 +49,36 @@ export default function CertificationsSection({
             >
               {/* Card Header (Always Visible Topic) */}
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                <div>
-                  <span className="font-mono text-xs uppercase tracking-widest text-signal font-semibold">
-                    {cert.issuer}
-                  </span>
-                  <h3 className="mt-1 font-display text-xl sm:text-2xl font-semibold text-slate-100 group-hover:text-copper transition-colors">
-                    {cert.name}
-                  </h3>
-                  {cert.date && (
-                    <div className="mt-1 font-mono text-xs text-slate-400">
-                      {cert.date}
+                <div className="flex items-start gap-4">
+                  {cert.badge && (
+                    <div className="relative h-14 w-14 sm:h-16 sm:w-16 shrink-0 overflow-hidden rounded-xl border border-line bg-panel2 p-1.5 shadow-sm group-hover:border-copper/40 transition-colors">
+                      <Image
+                        src={cert.badge}
+                        alt={`${cert.name} Badge`}
+                        width={64}
+                        height={64}
+                        className="h-full w-full object-contain"
+                      />
                     </div>
                   )}
-                  {cert.place && (
-                    <div className="mt-1 font-mono text-xs text-slate-400">
-                      {cert.place}
-                    </div>
-                  )}
+                  <div>
+                    <span className="font-mono text-xs uppercase tracking-widest text-signal font-semibold">
+                      {cert.issuer}
+                    </span>
+                    <h3 className="mt-1 font-display text-xl sm:text-2xl font-semibold text-slate-100 group-hover:text-copper transition-colors">
+                      {cert.name}
+                    </h3>
+                    {cert.date && (
+                      <div className="mt-1 font-mono text-xs text-slate-400">
+                        {cert.date}
+                      </div>
+                    )}
+                    {cert.place && (
+                      <div className="mt-1 font-mono text-xs text-slate-400">
+                        {cert.place}
+                      </div>
+                    )}
+                  </div>
                 </div>
 
                 <div className="flex items-center gap-3">
@@ -94,7 +108,7 @@ export default function CertificationsSection({
                     <div className="mt-4 flex flex-wrap items-center gap-3 font-mono text-xs">
                       {cert.verificationCode && (
                         <span className="rounded border border-line bg-bg px-3 py-1.5 text-slate-300">
-                          Verification Code: <strong className="text-copper font-semibold">{cert.verificationCode}</strong>
+                          Badge ID / Verification: <strong className="text-copper font-semibold">{cert.verificationCode}</strong>
                         </span>
                       )}
                       {cert.verificationUrl && (
@@ -104,7 +118,7 @@ export default function CertificationsSection({
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-1 rounded border border-copper/40 bg-copper/10 px-3 py-1.5 font-semibold text-copper hover:bg-copper hover:text-bg transition-colors"
                         >
-                          Verify Certificate ↗
+                          {cert.verificationUrl.includes("credly.com") ? "Verify on Credly ↗" : "Verify Certificate ↗"}
                         </a>
                       )}
                     </div>

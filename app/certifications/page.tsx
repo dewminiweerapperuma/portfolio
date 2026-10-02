@@ -8,6 +8,17 @@ export const metadata: Metadata = {
 
 const certifications = [
   {
+    id: "ibm-data-science",
+    name: "Data Science Foundations - Level 1",
+    issuer: "IBM Skills Network",
+    date: "Issued October 01, 2026",
+    desc: "Official IBM Skills Network certification recognizing foundational mastery of data science concepts, big data principles, data mining methodologies, and core tools used by modern data science professionals.",
+    badge: "/assets/badge-ibm-data-science.png",
+    image: "/assets/cert-ibm-data-science.png",
+    verificationCode: "230b7e86-bb4d-4bec-9cfd-986b1e20bbf5",
+    verificationUrl: "https://www.credly.com/badges/230b7e86-bb4d-4bec-9cfd-986b1e20bbf5",
+  },
+  {
     id: "road-to-legacy",
     name: "Certificate of Appreciation — Road To Legacy 2.0",
     issuer: "IEEE USJ Student Branch",
