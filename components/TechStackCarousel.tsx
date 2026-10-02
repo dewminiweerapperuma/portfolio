@@ -52,24 +52,27 @@ const Icons = {
     </div>
   ),
   Java: (
-    <svg className="h-7 w-7 sm:h-8 sm:w-8" viewBox="0 0 24 24" fill="none">
-      <path
-        d="M9.5 18.5c2.5.5 5.5-.5 7.5-.5-1 .5-2 1-3.5 1.2-2.5.3-4.5-.2-4-.7zM11 20.5c2 .2 4-.2 5.5-.4-1.2.6-2.8.8-4.5.8-2 0-3.2-.4-1-.4z"
-        fill="#E76F00"
-      />
-      <path
-        d="M14.5 12c.5-1.5-.5-2.8-1-4 .8.5 1.5 1.5 1.5 2.5 0 1-.5 1.5-.5 1.5z"
-        fill="#5382A1"
-      />
-      <path
-        d="M17 10c1-1.2.5-3-1-5 1 1 2 2.5 1.8 4-.2 1-.8 1-.8 1zM9 16c2.5.8 6.5.8 9.5 0-3 1.2-7 1.2-9.5 0z"
-        fill="#E76F00"
-      />
-      <path
-        d="M12.5 5c1-1.5 0-3-1-4 .8 1 1.5 2 1.2 3.2-.2.8-.2.8-.2.8z"
-        fill="#5382A1"
-      />
-    </svg>
+    <div className="flex flex-col items-center justify-center">
+      <svg className="h-6 w-6 sm:h-7 sm:w-7" viewBox="0 0 24 24" fill="none">
+        <path
+          d="M9.5 18.5c2.5.5 5.5-.5 7.5-.5-1 .5-2 1-3.5 1.2-2.5.3-4.5-.2-4-.7zM11 20.5c2 .2 4-.2 5.5-.4-1.2.6-2.8.8-4.5.8-2 0-3.2-.4-1-.4z"
+          fill="#F89820"
+        />
+        <path
+          d="M14.5 12c.5-1.5-.5-2.8-1-4 .8.5 1.5 1.5 1.5 2.5 0 1-.5 1.5-.5 1.5z"
+          fill="#5382A1"
+        />
+        <path
+          d="M17 10c1-1.2.5-3-1-5 1 1 2 2.5 1.8 4-.2 1-.8 1-.8 1zM9 16c2.5.8 6.5.8 9.5 0-3 1.2-7 1.2-9.5 0z"
+          fill="#F89820"
+        />
+        <path
+          d="M12.5 5c1-1.5 0-3-1-4 .8 1 1.5 2 1.2 3.2-.2.8-.2.8-.2.8z"
+          fill="#5382A1"
+        />
+      </svg>
+      <span className="text-[9px] font-bold font-mono text-[#F89820] leading-none mt-0.5">JAVA</span>
+    </div>
   ),
   SQL: (
     <svg className="h-7 w-7 sm:h-8 sm:w-8" viewBox="0 0 24 24" fill="none" stroke="#38BDF8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -190,8 +193,7 @@ const techCategories: TechCategory[] = [
       { name: "JavaScript", icon: Icons.JavaScript, color: "#F7DF1E" },
       { name: "Python", icon: Icons.Python, color: "#3776AB" },
       { name: "C", icon: Icons.C, color: "#00599C" },
-      { name: "C++", icon: Icons.Cpp, color: "#0086D4" },
-      { name: "Java", icon: Icons.Java, color: "#E76F00" },
+      { name: "Java", icon: Icons.Java, color: "#F89820" },
       { name: "SQL", icon: Icons.SQL, color: "#38BDF8" },
     ],
   },
@@ -244,7 +246,7 @@ const techCategories: TechCategory[] = [
     items: [
       { name: "ESP32 IoT", icon: Icons.ESP32, color: "#10B981" },
       { name: "Arduino IDE", icon: Icons.Arduino, color: "#00979D" },
-      { name: "Embedded C++", icon: Icons.Cpp, color: "#0086D4" },
+      { name: "Embedded C", icon: Icons.C, color: "#00599C" },
       { name: "Air Quality Sensors", icon: Icons.Sensors, color: "#F59E0B" },
     ],
   },
@@ -400,9 +402,10 @@ export default function TechStackCarousel() {
             opacity = 0.15;
           }
 
-          // Divide items into 2 rows for honeycomb layout (Row 1: up to 4, Row 2: remaining up to 3)
-          const row1 = cat.items.slice(0, 4);
-          const row2 = cat.items.slice(4);
+          // Divide items into 2 rows for balanced honeycomb layout (e.g. 3 and 3 for 6 items)
+          const splitIndex = cat.items.length === 6 ? 3 : Math.ceil(cat.items.length / 2);
+          const row1 = cat.items.slice(0, splitIndex);
+          const row2 = cat.items.slice(splitIndex);
 
           return (
             <div
