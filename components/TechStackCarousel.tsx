@@ -42,7 +42,7 @@ const Icons = {
     </svg>
   ),
   C: (
-    <div className="flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-full bg-gradient-to-br from-[#00599C] to-[#004482] text-sm sm:text-base font-extrabold font-mono text-white shadow-sm border border-cyan-400/40">
+    <div className="flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-full bg-gradient-to-br from-[#00599C] to-[#004482] text-sm sm:text-base font-extrabold font-mono text-white shadow-sm border border-copper/40">
       C
     </div>
   ),
@@ -262,7 +262,7 @@ function HexagonItem({ item }: { item: TechItem }) {
       onMouseLeave={() => setIsHovered(false)}
     >
       <div className="relative flex h-[68px] w-[60px] sm:h-[80px] sm:w-[70px] items-center justify-center transition-all duration-300 group-hover/hex:scale-110">
-        {/* SVG Hexagon with sleek cyan border matching screenshot */}
+        {/* SVG Hexagon with sleek purple/copper border matching theme */}
         <svg
           viewBox="0 0 100 115"
           className="absolute inset-0 h-full w-full drop-shadow-md transition-all duration-300"
@@ -270,8 +270,8 @@ function HexagonItem({ item }: { item: TechItem }) {
           <polygon
             points="50,2 96,28.5 96,86.5 50,113 4,86.5 4,28.5"
             fill="#090D22"
-            stroke={isHovered ? (item.color || "#00f2fe") : "#00f2fe"}
-            strokeOpacity={isHovered ? 1 : 0.45}
+            stroke={isHovered ? (item.color || "#818CF8") : "#6366F1"}
+            strokeOpacity={isHovered ? 1 : 0.55}
             strokeWidth={isHovered ? 3.5 : 2.5}
             className="transition-all duration-300"
           />
@@ -285,7 +285,7 @@ function HexagonItem({ item }: { item: TechItem }) {
 
       {/* Tooltip / Label on hover */}
       <span
-        className={`pointer-events-none absolute -bottom-7 z-30 whitespace-nowrap rounded-md border border-cyan-400/50 bg-[#050816]/95 px-2.5 py-1 font-mono text-[11px] font-semibold text-cyan-300 shadow-xl transition-all duration-200 ${
+        className={`pointer-events-none absolute -bottom-7 z-30 whitespace-nowrap rounded-md border border-copper/60 bg-[#050816]/95 px-2.5 py-1 font-mono text-[11px] font-semibold text-signal shadow-xl transition-all duration-200 ${
           isHovered ? "opacity-100 translate-y-0 scale-100" : "opacity-0 translate-y-1 scale-95"
         }`}
       >
@@ -345,7 +345,7 @@ export default function TechStackCarousel() {
             onClick={() => setActiveIndex(i)}
             className={`rounded-full px-4 py-1.5 font-mono text-xs transition-all duration-300 ${
               activeIndex === i
-                ? "border border-cyan-400 bg-cyan-500/20 text-cyan-300 shadow-[0_0_15px_rgba(6,182,212,0.4)] font-semibold"
+                ? "border border-copper bg-copper/20 text-signal shadow-[0_0_15px_rgba(99,102,241,0.4)] font-semibold"
                 : "border border-line bg-panel/60 text-slate-400 hover:border-slate-500 hover:text-slate-200"
             }`}
           >
@@ -422,8 +422,8 @@ export default function TechStackCarousel() {
               }}
               className={`absolute top-0 flex flex-col justify-between w-[92%] sm:w-[580px] h-[440px] sm:h-[420px] rounded-3xl p-6 sm:p-8 backdrop-blur-xl ${
                 isActive
-                  ? "border-2 border-cyan-400/80 bg-[#0A0E27]/95 shadow-[0_0_40px_rgba(0,242,254,0.22),_0_20px_40px_rgba(0,0,0,0.6)] cursor-default"
-                  : "border border-cyan-500/20 bg-[#080B1E]/80 cursor-pointer hover:border-cyan-400/40"
+                  ? "border-2 border-copper bg-[#0A0E27]/95 shadow-[0_0_35px_rgba(99,102,241,0.35),_0_20px_40px_rgba(0,0,0,0.6)] cursor-default"
+                  : "border border-copper/20 bg-[#080B1E]/80 cursor-pointer hover:border-copper/50"
               }`}
             >
               {/* Card Header (Category Title) */}
@@ -431,7 +431,7 @@ export default function TechStackCarousel() {
                 <h3 className="font-display text-2xl sm:text-3xl font-bold tracking-tight text-white">
                   {cat.title}
                 </h3>
-                <p className="mt-1 font-mono text-xs text-cyan-300 font-medium">
+                <p className="mt-1 font-mono text-xs text-signal font-medium">
                   {cat.subtitle}
                 </p>
               </div>
@@ -469,7 +469,7 @@ export default function TechStackCarousel() {
         <button
           onClick={prevSlide}
           aria-label="Previous tech category"
-          className="absolute left-2 sm:left-4 z-40 flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-full border border-cyan-400/40 bg-[#080D24]/80 text-cyan-300 shadow-[0_0_20px_rgba(0,242,254,0.2)] backdrop-blur-md transition-all duration-200 hover:scale-110 hover:border-cyan-300 hover:bg-cyan-500/20 active:scale-95"
+          className="absolute left-2 sm:left-4 z-40 flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-full border border-copper/50 bg-[#080D24]/80 text-signal shadow-[0_0_20px_rgba(99,102,241,0.25)] backdrop-blur-md transition-all duration-200 hover:scale-110 hover:border-copper hover:bg-copper/20 hover:text-white active:scale-95"
         >
           <span className="font-mono text-base font-bold">‹</span>
         </button>
@@ -479,19 +479,19 @@ export default function TechStackCarousel() {
           <button
             onClick={nextSlide}
             aria-label="Next tech category"
-            className="flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-full border border-cyan-400/40 bg-[#080D24]/80 text-cyan-300 shadow-[0_0_20px_rgba(0,242,254,0.2)] backdrop-blur-md transition-all duration-200 hover:scale-110 hover:border-cyan-300 hover:bg-cyan-500/20 active:scale-95"
+            className="flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-full border border-copper/50 bg-[#080D24]/80 text-signal shadow-[0_0_20px_rgba(99,102,241,0.25)] backdrop-blur-md transition-all duration-200 hover:scale-110 hover:border-copper hover:bg-copper/20 hover:text-white active:scale-95"
           >
             <span className="font-mono text-base font-bold">›</span>
           </button>
 
           {/* Inline pill + dots indicator as seen in reference image */}
-          <div className="hidden md:flex items-center gap-1.5 bg-[#080D24]/80 px-2.5 py-1.5 rounded-full border border-cyan-500/30 backdrop-blur-md">
+          <div className="hidden md:flex items-center gap-1.5 bg-[#080D24]/80 px-2.5 py-1.5 rounded-full border border-copper/30 backdrop-blur-md">
             {techCategories.map((_, i) => (
               <span
                 key={i}
                 className={`transition-all duration-300 ${
                   activeIndex === i
-                    ? "h-2 w-6 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(0,242,254,0.8)]"
+                    ? "h-2 w-6 rounded-full bg-copper shadow-[0_0_10px_rgba(99,102,241,0.8)]"
                     : "h-2 w-2 rounded-full bg-slate-600"
                 }`}
               />
@@ -509,7 +509,7 @@ export default function TechStackCarousel() {
             aria-label={`Go to slide ${i + 1}`}
             className={`transition-all duration-300 ${
               activeIndex === i
-                ? "h-2 w-8 sm:w-10 rounded-full bg-cyan-400 shadow-[0_0_12px_rgba(0,242,254,0.8)]"
+                ? "h-2 w-8 sm:w-10 rounded-full bg-copper shadow-[0_0_12px_rgba(99,102,241,0.8)]"
                 : "h-2 w-2 sm:w-2.5 rounded-full bg-slate-700 hover:bg-slate-500"
             }`}
           />
