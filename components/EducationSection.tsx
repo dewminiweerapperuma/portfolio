@@ -11,7 +11,6 @@ export interface EducationItem {
   desc: string;
   status: "In Progress" | "Completed";
   modules: string[];
-  highlights: string;
   category: "degree" | "diploma" | "school";
 }
 
@@ -32,8 +31,6 @@ const educationData: EducationItem[] = [
       "Web Technologies",
       "Business Management & Accounting",
     ],
-    highlights:
-      "Selected as Tech Titans team member presenting the ESP32-based Indoor Air Quality Monitoring System at FIT EXPO 2025. Bridging technical software logic with commercial product viability.",
     category: "degree",
   },
   {
@@ -50,8 +47,6 @@ const educationData: EducationItem[] = [
       "Academic & Technical Writing",
       "Professional Presentations & Discourse",
     ],
-    highlights:
-      "Mastered formal documentation and cross-disciplinary technical communication, enhancing leadership and team presentation capabilities.",
     category: "diploma",
   },
   {
@@ -69,8 +64,6 @@ const educationData: EducationItem[] = [
       "Web Development Basics",
       "IT Infrastructure & Hardware",
     ],
-    highlights:
-      "Gained hands-on experience in networking architecture, threat modeling, and programmatic scripting before beginning university studies.",
     category: "diploma",
   },
   {
@@ -86,24 +79,17 @@ const educationData: EducationItem[] = [
       "Physics",
       "Chemistry",
     ],
-    highlights:
-      "Developed mathematical discipline and analytical critical thinking that form the mathematical backbone of algorithm analysis and software engineering.",
     category: "school",
   },
 ];
 
 export default function EducationSection() {
   const [activeFilter, setActiveFilter] = useState<string>("all");
-  const [expandedId, setExpandedId] = useState<string | null>("moratuwa"); // Default open top card
 
   const filteredItems = educationData.filter((item) => {
     if (activeFilter === "all") return true;
     return item.category === activeFilter;
   });
-
-  const toggleExpand = (id: string) => {
-    setExpandedId((prev) => (prev === id ? null : id));
-  };
 
   return (
     <div className="w-full">
@@ -134,8 +120,7 @@ export default function EducationSection() {
         {/* Continuous Glowing Timeline Spine */}
         <div className="absolute left-[11px] sm:left-[23px] top-4 bottom-4 w-[2px] bg-gradient-to-b from-copper via-purple-500 to-indigo-950/30" />
 
-        {filteredItems.map((item, index) => {
-          const isExpanded = expandedId === item.id;
+        {filteredItems.map((item) => {
           const isInProgress = item.status === "In Progress";
 
           return (
@@ -157,14 +142,7 @@ export default function EducationSection() {
               </div>
 
               {/* Main Milestone Card */}
-              <div
-                onClick={() => toggleExpand(item.id)}
-                className={`cursor-pointer rounded-2xl border transition-all duration-300 bg-panel/90 backdrop-blur-xl p-6 sm:p-8 ${
-                  isExpanded
-                    ? "border-copper shadow-[0_0_35px_rgba(99,102,241,0.25)] bg-panel"
-                    : "border-line hover:border-copper/60 hover:bg-panel2"
-                }`}
-              >
+              <div className="rounded-2xl border border-line bg-panel/90 backdrop-blur-xl p-6 sm:p-8 transition-all duration-300 hover:border-copper/70 hover:shadow-[0_0_35px_rgba(99,102,241,0.22)] hover:bg-panel">
                 {/* Header: Period, Degree Badge & Live Status */}
                 <div className="flex flex-wrap items-center justify-between gap-3 pb-3 border-b border-line/60">
                   <div className="flex flex-wrap items-center gap-3">
@@ -222,31 +200,6 @@ export default function EducationSection() {
                       </span>
                     ))}
                   </div>
-                </div>
-
-                {/* Expandable Key Highlights Drawer */}
-                {isExpanded && (
-                  <div
-                    className="mt-6 pt-5 border-t border-line/60 animate-fadeIn"
-                    onClick={(e) => e.stopPropagation()}
-                  >
-                    <div className="rounded-xl border border-copper/30 bg-[#0A0D26]/90 p-4 sm:p-5 shadow-inner">
-                      <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-signal font-semibold">
-                        <span>⚡</span>
-                        <span>Key Highlights & Engineering Impact</span>
-                      </div>
-                      <p className="mt-2 text-sm text-slate-300 leading-relaxed">
-                        {item.highlights}
-                      </p>
-                    </div>
-                  </div>
-                )}
-
-                {/* Footer Drawer Toggle */}
-                <div className="mt-5 flex justify-end">
-                  <span className="font-mono text-xs text-copper hover:text-signal transition-colors inline-flex items-center gap-1 font-semibold">
-                    {isExpanded ? "Hide Highlights ▲" : "View Highlights & Details ▼"}
-                  </span>
                 </div>
               </div>
             </div>
