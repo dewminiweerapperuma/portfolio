@@ -336,7 +336,7 @@ export default function TechStackCarousel() {
   };
 
   return (
-    <div className="relative w-full select-none py-6" ref={containerRef}>
+    <div className="relative w-full max-w-full overflow-hidden select-none py-6" ref={containerRef}>
       {/* Category Pills Header for Quick Direct Selection */}
       <div className="mb-8 flex flex-wrap items-center justify-center gap-2">
         {techCategories.map((cat, i) => (
@@ -356,7 +356,7 @@ export default function TechStackCarousel() {
 
       {/* 3D Cover Flow Stage */}
       <div
-        className="relative mx-auto flex h-[480px] sm:h-[460px] w-full max-w-6xl items-center justify-center overflow-visible"
+        className="relative mx-auto flex h-[480px] sm:h-[460px] w-full max-w-5xl items-center justify-center overflow-hidden px-2 sm:px-4"
         style={{ perspective: "1200px" }}
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
@@ -371,11 +371,12 @@ export default function TechStackCarousel() {
           const isPrev = offset === -1;
           const isNext = offset === 1;
 
-          // 3D Transforms according to offset
+          // 3D Transforms according to offset - strictly constrained to fit screen
           let transformStyle = "";
           let zIndex = 10;
           let opacity = 0;
           let pointerEvents: "auto" | "none" = "none";
+          let visibility: "visible" | "hidden" = "visible";
 
           if (isActive) {
             transformStyle = "translateX(0%) scale(1) rotateY(0deg)";
@@ -383,23 +384,20 @@ export default function TechStackCarousel() {
             opacity = 1;
             pointerEvents = "auto";
           } else if (isPrev) {
-            transformStyle = "translateX(-68%) scale(0.85) rotateY(28deg)";
+            transformStyle = "translateX(-52%) scale(0.85) rotateY(25deg)";
             zIndex = 20;
             opacity = 0.45;
             pointerEvents = "auto";
           } else if (isNext) {
-            transformStyle = "translateX(68%) scale(0.85) rotateY(-28deg)";
+            transformStyle = "translateX(52%) scale(0.85) rotateY(-25deg)";
             zIndex = 20;
             opacity = 0.45;
             pointerEvents = "auto";
-          } else if (offset < -1) {
-            transformStyle = "translateX(-115%) scale(0.7) rotateY(38deg)";
+          } else {
+            transformStyle = offset < 0 ? "translateX(-85%) scale(0.7) rotateY(35deg)" : "translateX(85%) scale(0.7) rotateY(-35deg)";
             zIndex = 10;
-            opacity = 0.15;
-          } else if (offset > 1) {
-            transformStyle = "translateX(115%) scale(0.7) rotateY(-38deg)";
-            zIndex = 10;
-            opacity = 0.15;
+            opacity = 0;
+            visibility = "hidden";
           }
 
           // Divide items into 2 rows for balanced honeycomb layout (e.g. 3 and 3 for 6 items)
@@ -418,9 +416,10 @@ export default function TechStackCarousel() {
                 zIndex,
                 opacity,
                 pointerEvents,
+                visibility,
                 transition: "transform 550ms cubic-bezier(0.16, 1, 0.3, 1), opacity 450ms ease, box-shadow 450ms ease, border-color 450ms ease",
               }}
-              className={`absolute top-0 flex flex-col justify-between w-[92%] sm:w-[580px] h-[440px] sm:h-[420px] rounded-3xl p-6 sm:p-8 backdrop-blur-xl ${
+              className={`absolute top-0 flex flex-col justify-between w-[92%] sm:w-[480px] md:w-[520px] max-w-[540px] h-[440px] sm:h-[420px] rounded-3xl p-6 sm:p-8 backdrop-blur-xl ${
                 isActive
                   ? "border-2 border-copper bg-[#0A0E27]/95 shadow-[0_0_35px_rgba(99,102,241,0.35),_0_20px_40px_rgba(0,0,0,0.6)] cursor-default"
                   : "border border-copper/20 bg-[#080B1E]/80 cursor-pointer hover:border-copper/50"

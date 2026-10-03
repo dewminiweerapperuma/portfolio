@@ -204,7 +204,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="trace-module mt-20" id="tech-stack">
+          <div className="trace-module mt-20 overflow-hidden w-full max-w-full" id="tech-stack">
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-2">
               <div>
                 <span className="font-mono text-xs uppercase tracking-widest text-signal font-semibold">
