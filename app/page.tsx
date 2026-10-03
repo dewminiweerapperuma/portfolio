@@ -3,38 +3,8 @@ import Link from "next/link";
 import PageHeader from "@/components/PageHeader";
 import CertificationsSection from "@/components/CertificationsSection";
 import TechStackCarousel from "@/components/TechStackCarousel";
+import EducationSection from "@/components/EducationSection";
 import ContactSection from "@/components/ContactSection";
-
-const timeline = [
-  {
-    period: "2024 — Present",
-    title: "B.Sc. (Hons) Information Technology and Management",
-    place: "University of Moratuwa — Faculty of Information Technology",
-    desc: "Undergraduate degree program combining information technology, software engineering, and database management with strategic business administration, accounting, and economics.",
-    status: "In Progress",
-  },
-  {
-    period: "2023 — 2024",
-    title: "Diploma in English Language and Literature",
-    place: "Aquinas Higher College of Studies",
-    desc: "Comprehensive diploma program focusing on advanced English language communication, literature, and formal academic writing.",
-    status: "Completed",
-  },
-  {
-    period: "2023",
-    title: "Diploma in Information Technology and Communication",
-    place: "ICBT Campus",
-    desc: "Foundational diploma covering fundamentals of computer networks, cybersecurity, Python programming, web development, and IT system essentials.",
-    status: "Completed",
-  },
-  {
-    period: "2023",
-    title: "G.C.E. Advanced Level — Physical Science Stream",
-    place: "Buddhist Girls' National College, Wennappuwa",
-    desc: "Secondary education completed in the Physical Science stream (Combined Mathematics, Physics, and Chemistry).",
-    status: "Completed",
-  },
-];
 
 const certifications = [
   {
@@ -234,35 +204,8 @@ export default function Home() {
             nodeId="U3 — EDUCATION"
           />
 
-          <div className="trace-module mt-12 space-y-0">
-            {timeline.map((item, i) => (
-              <div
-                key={item.title}
-                className={`grid grid-cols-1 gap-6 py-10 sm:grid-cols-[220px_1fr] ${
-                  i !== 0 ? "border-t border-line" : ""
-                }`}
-              >
-                <div>
-                  <div className="font-mono text-sm font-semibold text-copper">{item.period}</div>
-                  <span
-                    className={`mt-3 inline-block rounded-full border px-3.5 py-1 font-mono text-[0.7rem] uppercase tracking-widest font-medium ${
-                      item.status === "In Progress"
-                        ? "border-signal text-signal bg-signal/10"
-                        : "border-slate-400 text-slate-300"
-                    }`}
-                  >
-                    {item.status}
-                  </span>
-                </div>
-                <div>
-                  <h3 className="font-display text-2xl font-semibold text-slate-100">{item.title}</h3>
-                  <div className="mt-2 font-mono text-sm sm:text-base font-semibold text-copper tracking-wide">
-                    {item.place}
-                  </div>
-                  <p className="mt-3.5 max-w-3xl text-base text-slate-200 leading-relaxed">{item.desc}</p>
-                </div>
-              </div>
-            ))}
+          <div className="trace-module mt-12">
+            <EducationSection />
           </div>
         </div>
       </section>
