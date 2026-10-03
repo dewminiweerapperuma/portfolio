@@ -113,12 +113,15 @@ export default function Home() {
               >
                 View Projects
               </Link>
-              <Link
-                href="/#contact"
-                className="rounded-full border-2 border-copper px-7 py-3.5 font-mono text-xs sm:text-sm font-semibold text-copper transition-colors hover:bg-copper hover:text-bg"
+              <a
+                href="/Dewmini_Weerapperuma_CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border-2 border-copper px-7 py-3.5 font-mono text-xs sm:text-sm font-semibold text-copper transition-all duration-300 hover:bg-copper hover:text-bg hover:shadow-[0_0_20px_rgba(99,102,241,0.4)]"
               >
-                Get In Touch
-              </Link>
+                <span>View My CV</span>
+                <span className="text-xs">↗</span>
+              </a>
             </div>
           </div>
 
