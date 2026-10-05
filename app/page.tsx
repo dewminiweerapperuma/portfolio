@@ -239,6 +239,76 @@ export default function Home() {
           />
 
           <div className="trace-module mt-12 space-y-8">
+            {/* OneShop project */}
+            <article className="border border-line bg-panel p-8">
+              <div className="flex flex-wrap items-start justify-between gap-4 pb-2">
+                <h3 className="font-display text-2xl font-semibold text-slate-100">
+                  <Link
+                    href="/projects/oneshop"
+                    className="transition-colors hover:text-copper inline-flex items-center gap-2 group"
+                  >
+                    OneShop — Cloud POS & Unified E-Commerce Platform
+                    <span className="text-sm font-mono text-copper opacity-80 group-hover:opacity-100 transition-opacity">
+                      →
+                    </span>
+                  </Link>
+                </h3>
+                <div className="flex items-center gap-2">
+                  <span className="whitespace-nowrap rounded-full border border-copperDim bg-copper/10 px-3.5 py-1 font-mono text-[0.7rem] uppercase tracking-widest text-copper font-semibold">
+                    Client Project
+                  </span>
+                  <span className="whitespace-nowrap rounded-full border border-signal bg-signal/10 px-3.5 py-1 font-mono text-[0.7rem] uppercase tracking-widest text-signal font-semibold">
+                    Completed
+                  </span>
+                </div>
+              </div>
+              <div className="pt-2">
+                <p className="max-w-4xl text-base sm:text-lg text-slate-200 leading-relaxed">
+                  Cloud-based, multi-tenant POS and E-Commerce Progressive Web Application developed as our second-year team project (team &quot;Cipher5&quot;) for a real client — <strong className="text-slate-100 font-medium">Eutech Cybernetic Lanka (Pvt) Ltd</strong> — at the Faculty of IT, University of Moratuwa. Solves the retail challenge of offline POS registers disconnected from online stores by providing real-time inventory synchronization across in-store and digital sales.
+                </p>
+                <div className="mt-5 flex flex-wrap items-center justify-between gap-4">
+                  <div className="flex flex-wrap gap-2.5">
+                    {[
+                      "Next.js",
+                      "TypeScript",
+                      "Node.js / Express",
+                      "MongoDB",
+                      "AWS",
+                      "PayHere.lk",
+                      "Tailwind CSS",
+                      "Jest / Supertest",
+                    ].map((t) => (
+                      <span
+                        key={t}
+                        className="rounded-full border border-copperDim bg-copper/10 px-3.5 py-1.5 font-mono text-xs text-copper font-medium"
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="flex flex-wrap items-center gap-3">
+                    <a
+                      href="https://opendoor.allinoneshop.store/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 rounded-full border border-signal bg-signal/15 px-4 py-2 font-mono text-xs font-semibold text-signal transition-colors hover:bg-signal hover:text-bg"
+                    >
+                      Live Demo ↗
+                    </a>
+                    <Link
+                      href="/projects/oneshop"
+                      className="inline-flex items-center gap-2 rounded-full border border-copper px-5 py-2 font-mono text-xs font-semibold text-copper transition-colors hover:bg-copper hover:text-bg"
+                    >
+                      View Case Study →
+                    </Link>
+                  </div>
+                </div>
+                <p className="mt-5 border-t border-dashed border-line pt-4 text-sm text-slate-300">
+                  <strong className="text-slate-100 font-medium">My contribution:</strong> Authentication, Customer Account Management &amp; Order Fulfillment module — JWT + dual-path password recovery (email &amp; security questions), order lifecycle state machine with stock reservation, Sri Lankan district-based delivery fee calculator, and in-memory Jest/Supertest integration suites.
+                </p>
+              </div>
+            </article>
+
             {/* Shop Inventory project */}
             <article className="border border-line bg-panel p-8">
               <div className="flex flex-wrap items-start justify-between gap-4 pb-2">

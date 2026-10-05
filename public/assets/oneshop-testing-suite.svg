@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+    <defs>
+      <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="1" stroke-opacity="0.6"/>
+      </pattern>
+      <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#090d16"/>
+        <stop offset="100%" stop-color="#04070d"/>
+      </linearGradient>
+      <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#ec4899" stop-opacity="0.3"/>
+        <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.1"/>
+      </linearGradient>
+      <linearGradient id="panelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#141e33"/>
+        <stop offset="100%" stop-color="#0b1120"/>
+      </linearGradient>
+      <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+        <feGaussianBlur stdDeviation="15" result="blur" />
+        <feComposite in="SourceGraphic" in2="blur" operator="over" />
+      </filter>
+    </defs>
+
+    <!-- Main Background -->
+    <rect width="1200" height="800" fill="url(#bgGrad)"/>
+    <rect width="1200" height="800" fill="url(#grid)"/>
+
+    <!-- Outer Window Frame -->
+    <rect x="50" y="50" width="1100" height="700" rx="16" fill="url(#panelGrad)" stroke="#334155" stroke-width="1.5"/>
+
+    <!-- Window Topbar -->
+    <rect x="50" y="50" width="1100" height="54" rx="16" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+    <rect x="50" y="80" width="1100" height="24" fill="#0f172a"/>
+    <line x1="50" y1="104" x2="1150" y2="104" stroke="#334155" stroke-width="1"/>
+
+    <!-- Window Buttons -->
+    <circle cx="85" cy="77" r="7" fill="#ef4444"/>
+    <circle cx="110" cy="77" r="7" fill="#f59e0b"/>
+    <circle cx="135" cy="77" r="7" fill="#10b981"/>
+
+    <!-- Topbar Breadcrumb & Badge -->
+    <text x="170" y="82" font-family="'JetBrains Mono', monospace, sans-serif" font-size="13" font-weight="600" fill="#94a3b8">OneShop PWA // Client Project — Eutech Cybernetic Lanka // Team Cipher5</text>
+    <rect x="940" y="66" width="180" height="24" rx="12" fill="#ec4899" fill-opacity="0.15" stroke="#ec4899" stroke-width="1"/>
+    <text x="1030" y="82" font-family="'JetBrains Mono', monospace, sans-serif" font-size="11" font-weight="700" fill="#ec4899" text-anchor="middle">JEST + SUPERTEST</text>
+
+    <!-- Title Header inside window -->
+    <g transform="translate(90, 140)">
+      <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="800" fill="#f8fafc">Automated In-Memory Test Suite</text>
+      <text x="0" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="400" fill="#94a3b8">Jest & Supertest integration tests verifying auth boundaries, orders, and delivery fee accuracy</text>
+    </g>
+
+    <!-- Dynamic Content Area -->
+    <g transform="translate(90, 195)">
+      
+  <rect width="1020" height="495" rx="12" fill="#090d16" stroke="#1e293b"/>
+
+  <g transform="translate(30, 30)">
+    <text x="0" y="20" font-family="'JetBrains Mono', monospace" font-size="18" font-weight="700" fill="#f8fafc">Automated In-Memory Integration Test Suite</text>
+    <text x="0" y="45" font-family="sans-serif" font-size="13" fill="#94a3b8">Comprehensive Jest + Supertest suites executed against isolated MongoMemoryServer instances.</text>
+
+    <!-- Terminal Box -->
+    <rect x="0" y="65" width="960" height="355" rx="8" fill="#030712" stroke="#1e293b"/>
+    <rect x="0" y="65" width="960" height="32" rx="8" fill="#111827"/>
+    <circle cx="20" cy="81" r="5" fill="#ef4444"/>
+    <circle cx="36" cy="81" r="5" fill="#f59e0b"/>
+    <circle cx="52" cy="81" r="5" fill="#10b981"/>
+    <text x="75" y="85" font-family="monospace" font-size="11" fill="#9ca3af">bash — jest --runInBand --detectOpenHandles</text>
+
+    <g transform="translate(20, 120)" font-family="'JetBrains Mono', monospace" font-size="11" fill="#f8fafc">
+      <text y="0" fill="#10b981">PASS</text><text x="45" y="0">src/tests/auth.test.ts</text>
+      <text x="25" y="20" fill="#9ca3af">✓ should register new customer with bcrypt hashed password (142 ms)</text>
+      <text x="25" y="38" fill="#9ca3af">✓ should reject login with invalid password (48 ms)</text>
+      <text x="25" y="56" fill="#9ca3af">✓ should trigger password reset token via Nodemailer mock (89 ms)</text>
+      <text x="25" y="74" fill="#9ca3af">✓ should fallback to security question verification when email fails (62 ms)</text>
+
+      <text y="105" fill="#10b981">PASS</text><text x="45" y="105">src/tests/orders.test.ts</text>
+      <text x="25" y="125" fill="#9ca3af">✓ should reserve item stock when order created in PENDING state (110 ms)</text>
+      <text x="25" y="143" fill="#9ca3af">✓ should transition PENDING → CONFIRMED upon PayHere payment webhook (95 ms)</text>
+      <text x="25" y="161" fill="#9ca3af">✓ should auto-restore stock when order is cancelled before shipping (81 ms)</text>
+      <text x="25" y="179" fill="#9ca3af">✓ should enforce manager RBAC for order status override (45 ms)</text>
+
+      <text y="210" fill="#10b981">PASS</text><text x="45" y="210">src/tests/delivery.test.ts</text>
+      <text x="25" y="230" fill="#9ca3af">✓ should calculate exact district tariffs across 25 Sri Lankan zones (38 ms)</text>
+
+      <line x1="0" y1="245" x2="920" y2="245" stroke="#1f2937"/>
+      <text y="265" fill="#10b981" font-weight="700">Test Suites: 3 passed, 3 total</text>
+      <text y="285" fill="#10b981" font-weight="700">Tests:       18 passed, 18 total</text>
+      <text y="305" fill="#6b7280">Snapshots:   0 total | Time: 2.148 s | In-Memory MongoDB: Disconnected clean</text>
+    </g>
+  </g>
+
+    </g>
+
+    <!-- Footer Meta -->
+    <line x1="90" y1="710" x2="1110" y2="710" stroke="#1e293b" stroke-width="1"/>
+    <text x="90" y="730" font-family="'JetBrains Mono', monospace, sans-serif" font-size="11" fill="#64748b">Tech: Next.js • React • Express • MongoDB • AWS • PayHere.lk • Nodemailer • Jest</text>
+    <text x="1110" y="730" font-family="'JetBrains Mono', monospace, sans-serif" font-size="11" fill="#64748b" text-anchor="end">Faculty of IT, University of Moratuwa</text>
+  </svg>

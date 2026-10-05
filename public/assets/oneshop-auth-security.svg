@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+    <defs>
+      <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="1" stroke-opacity="0.6"/>
+      </pattern>
+      <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#090d16"/>
+        <stop offset="100%" stop-color="#04070d"/>
+      </linearGradient>
+      <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#a855f7" stop-opacity="0.3"/>
+        <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.1"/>
+      </linearGradient>
+      <linearGradient id="panelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#141e33"/>
+        <stop offset="100%" stop-color="#0b1120"/>
+      </linearGradient>
+      <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+        <feGaussianBlur stdDeviation="15" result="blur" />
+        <feComposite in="SourceGraphic" in2="blur" operator="over" />
+      </filter>
+    </defs>
+
+    <!-- Main Background -->
+    <rect width="1200" height="800" fill="url(#bgGrad)"/>
+    <rect width="1200" height="800" fill="url(#grid)"/>
+
+    <!-- Outer Window Frame -->
+    <rect x="50" y="50" width="1100" height="700" rx="16" fill="url(#panelGrad)" stroke="#334155" stroke-width="1.5"/>
+
+    <!-- Window Topbar -->
+    <rect x="50" y="50" width="1100" height="54" rx="16" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+    <rect x="50" y="80" width="1100" height="24" fill="#0f172a"/>
+    <line x1="50" y1="104" x2="1150" y2="104" stroke="#334155" stroke-width="1"/>
+
+    <!-- Window Buttons -->
+    <circle cx="85" cy="77" r="7" fill="#ef4444"/>
+    <circle cx="110" cy="77" r="7" fill="#f59e0b"/>
+    <circle cx="135" cy="77" r="7" fill="#10b981"/>
+
+    <!-- Topbar Breadcrumb & Badge -->
+    <text x="170" y="82" font-family="'JetBrains Mono', monospace, sans-serif" font-size="13" font-weight="600" fill="#94a3b8">OneShop PWA // Client Project — Eutech Cybernetic Lanka // Team Cipher5</text>
+    <rect x="940" y="66" width="180" height="24" rx="12" fill="#a855f7" fill-opacity="0.15" stroke="#a855f7" stroke-width="1"/>
+    <text x="1030" y="82" font-family="'JetBrains Mono', monospace, sans-serif" font-size="11" font-weight="700" fill="#a855f7" text-anchor="middle">JWT + BCRYPT</text>
+
+    <!-- Title Header inside window -->
+    <g transform="translate(90, 140)">
+      <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="800" fill="#f8fafc">Authentication & Dual-Path Password Recovery</text>
+      <text x="0" y="28" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="400" fill="#94a3b8">Nodemailer email verification + security-question fallback with role-based access control (RBAC)</text>
+    </g>
+
+    <!-- Dynamic Content Area -->
+    <g transform="translate(90, 195)">
+      
+  <rect width="1020" height="495" rx="12" fill="#090d16" stroke="#1e293b"/>
+  
+  <g transform="translate(30, 30)">
+    <!-- Column 1: Auth Architecture -->
+    <rect x="0" y="0" width="460" height="435" rx="10" fill="#0f172a" stroke="#1e293b"/>
+    <text x="25" y="38" font-family="'JetBrains Mono', monospace" font-size="16" font-weight="700" fill="#38bdf8">Dual-Path Password Reset System</text>
+    <text x="25" y="65" font-family="sans-serif" font-size="13" fill="#94a3b8">Tailored for Sri Lankan connectivity conditions &amp; retail staff.</text>
+
+    <!-- Path A: Email Flow -->
+    <rect x="25" y="90" width="410" height="150" rx="8" fill="#1e293b" fill-opacity="0.6" stroke="#334155"/>
+    <text x="45" y="120" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#10b981">Path A: Nodemailer SMTP Verification</text>
+    <text x="45" y="145" font-family="sans-serif" font-size="12" fill="#cbd5e1">1. User requests password reset via registered email.</text>
+    <text x="45" y="168" font-family="sans-serif" font-size="12" fill="#cbd5e1">2. Crypto-secure 15-minute token generated &amp; hashed.</text>
+    <text x="45" y="191" font-family="sans-serif" font-size="12" fill="#cbd5e1">3. Direct branded deep-link sent with one-time validity.</text>
+    <text x="45" y="214" font-family="sans-serif" font-size="12" fill="#cbd5e1">4. Bcrypt re-hashes password upon client validation.</text>
+
+    <!-- Path B: Security Questions -->
+    <rect x="25" y="260" width="410" height="150" rx="8" fill="#1e293b" fill-opacity="0.6" stroke="#334155"/>
+    <text x="45" y="290" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="700" fill="#f59e0b">Path B: Security Question Fallback</text>
+    <text x="45" y="315" font-family="sans-serif" font-size="12" fill="#cbd5e1">1. Designed for users/retail staff without reliable email access.</text>
+    <text x="45" y="338" font-family="sans-serif" font-size="12" fill="#cbd5e1">2. Configured during onboarding with salt-hashed answers.</text>
+    <text x="45" y="361" font-family="sans-serif" font-size="12" fill="#cbd5e1">3. Rate-limited challenge prevention against brute force.</text>
+    <text x="45" y="384" font-family="sans-serif" font-size="12" fill="#cbd5e1">4. Unlocks instant credential reset with audit log event.</text>
+  </g>
+
+  <g transform="translate(520, 30)">
+    <!-- Column 2: Data Models & RBAC -->
+    <rect x="0" y="0" width="470" height="435" rx="10" fill="#0f172a" stroke="#1e293b"/>
+    <text x="25" y="38" font-family="'JetBrains Mono', monospace" font-size="16" font-weight="700" fill="#a855f7">Identity Models &amp; Role Boundaries</text>
+    <text x="25" y="65" font-family="sans-serif" font-size="13" fill="#94a3b8">MongoDB Mongoose schema with granular permission checks.</text>
+
+    <rect x="25" y="90" width="420" height="320" rx="8" fill="#050811" stroke="#1e293b"/>
+    <g transform="translate(45, 120)" font-family="'JetBrains Mono', monospace" font-size="12" fill="#cbd5e1">
+      <text y="0" fill="#f43f5e">// UserSchema (MongoDB / Mongoose)</text>
+      <text y="22" fill="#38bdf8">const UserSchema = new Schema({</text>
+      <text y="44">  name: { type: String, required: true },</text>
+      <text y="66">  email: { type: String, unique: true, index: true },</text>
+      <text y="88">  passwordHash: { type: String, select: false },</text>
+      <text y="110">  role: {</text>
+      <text y="132" fill="#10b981">    type: String,</text>
+      <text y="154" fill="#10b981">    enum: ['customer', 'cashier', 'manager', 'admin'],</text>
+      <text y="176" fill="#10b981">    default: 'customer'</text>
+      <text y="198">  },</text>
+      <text y="220">  securityQuestion: { q: String, aHash: String },</text>
+      <text y="242">  avatarUrl: { type: String },</text>
+      <text y="264" fill="#38bdf8">});</text>
+    </g>
+  </g>
+
+    </g>
+
+    <!-- Footer Meta -->
+    <line x1="90" y1="710" x2="1110" y2="710" stroke="#1e293b" stroke-width="1"/>
+    <text x="90" y="730" font-family="'JetBrains Mono', monospace, sans-serif" font-size="11" fill="#64748b">Tech: Next.js • React • Express • MongoDB • AWS • PayHere.lk • Nodemailer • Jest</text>
+    <text x="1110" y="730" font-family="'JetBrains Mono', monospace, sans-serif" font-size="11" fill="#64748b" text-anchor="end">Faculty of IT, University of Moratuwa</text>
+  </svg>
