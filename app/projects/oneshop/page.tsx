@@ -100,30 +100,6 @@ const photos = [
     caption:
       "Order Milestone Stepper & Tracking Number — Live delivery progress visualization with unique tracking generator (OS282889MBY) and invoice emailing.",
   },
-  {
-    src: "/assets/oneshop-order-lifecycle.svg",
-    alt: "OneShop Order Lifecycle State Machine & Stock Reservation",
-    caption:
-      "Order State Machine — Deterministic transitions (Pending → Confirmed → Shipped → Delivered) with automated stock reservation and rollback.",
-  },
-  {
-    src: "/assets/oneshop-checkout-delivery.svg",
-    alt: "OneShop Sri Lanka District Delivery Calculator & PayHere.lk",
-    caption:
-      "Checkout & Delivery Architecture — Dynamic multi-tier delivery tariff calculation across Sri Lanka's 25 administrative districts with PayHere.lk gateway.",
-  },
-  {
-    src: "/assets/oneshop-auth-security.svg",
-    alt: "OneShop Dual-Path Authentication & RBAC",
-    caption:
-      "Identity Architecture — JWT authentication with bcrypt hashing, Nodemailer reset flow, and a security-question fallback for offline-prone environments.",
-  },
-  {
-    src: "/assets/oneshop-testing-suite.svg",
-    alt: "OneShop Automated In-Memory Test Suite",
-    caption:
-      "Quality Assurance — Automated Jest and Supertest test suites executed against isolated in-memory MongoDB instances.",
-  },
 ];
 
 const features = [
