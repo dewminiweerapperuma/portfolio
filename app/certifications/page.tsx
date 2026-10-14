@@ -8,6 +8,28 @@ export const metadata: Metadata = {
 
 const certifications = [
   {
+    id: "ibm-python-data-science",
+    name: "Python for Data Science",
+    issuer: "IBM",
+    date: "Issued October 12, 2026",
+    desc: "Official IBM certification recognizing hands-on capability to write Python scripts, work in Jupyter notebook environments, and perform data analysis using standard Python data science libraries.",
+    badge: "/assets/badge-python-data-science.png",
+    image: "/assets/cert-python-data-science.png",
+    verificationCode: "94e144ab-b4b7-476a-b223-ffe0702a0c53",
+    verificationUrl: "https://www.credly.com/badges/94e144ab-b4b7-476a-b223-ffe0702a0c53",
+  },
+  {
+    id: "cognitive-class-python-101",
+    name: "Python 101 for Data Science",
+    issuer: "Cognitive Class (Powered by IBM Developer Skills Network)",
+    date: "Issued October 12, 2026",
+    desc: "Verified course certificate (PY0101EN, provided by IBM) demonstrating core Python fundamentals, data structures, conditional execution, loops, functions, and introductory data analysis tools.",
+    badge: "/assets/badge-python-101.png",
+    image: "/assets/cert-python-101-data-science.png",
+    verificationCode: "737fd9e64b0d40fab48fbbf301eb8da6",
+    verificationUrl: "https://courses.cognitiveclass.ai/certificates/737fd9e64b0d40fab48fbbf301eb8da6",
+  },
+  {
     id: "ibm-data-science",
     name: "Data Science Foundations - Level 1",
     issuer: "IBM Skills Network",
